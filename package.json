@@ -1,0 +1,23 @@
+{
+  "name": "autonomous-runtime-skeleton",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Autonomous runtime skeleton with JSON-driven configuration",
+  "main": "dist/runtime/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/runtime/index.js",
+    "dev": "tsc && node dist/runtime/index.js"
+  },
+  "keywords": [
+    "runtime",
+    "autonomous",
+    "state-machine"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

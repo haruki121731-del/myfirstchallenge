@@ -1,0 +1,21 @@
+{
+  "thresholds": {
+    "evaluation": {
+      "pass_score": 0.8,
+      "retry_score": 0.5,
+      "max_retries": 3
+    },
+    "timing": {
+      "task_timeout_ms": 30000,
+      "idle_timeout_ms": 60000
+    },
+    "resource": {
+      "max_memory_mb": 512,
+      "max_concurrent_tasks": 5
+    },
+    "error": {
+      "max_consecutive_failures": 3,
+      "backoff_multiplier": 2
+    }
+  }
+}
