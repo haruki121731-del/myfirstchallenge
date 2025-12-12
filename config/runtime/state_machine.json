@@ -1,0 +1,44 @@
+{
+  "initial": "idle",
+  "states": {
+    "idle": {
+      "on": {
+        "START": "generating"
+      }
+    },
+    "generating": {
+      "on": {
+        "SUCCESS": "rendering",
+        "FAILURE": "halt"
+      }
+    },
+    "rendering": {
+      "on": {
+        "SUCCESS": "uploading",
+        "FAILURE": "halt"
+      }
+    },
+    "uploading": {
+      "on": {
+        "SUCCESS": "evaluating",
+        "FAILURE": "halt"
+      }
+    },
+    "evaluating": {
+      "on": {
+        "PASS": "mutating",
+        "FAIL": "halt",
+        "RETRY": "generating"
+      }
+    },
+    "mutating": {
+      "on": {
+        "SUCCESS": "halt",
+        "FAILURE": "halt"
+      }
+    },
+    "halt": {
+      "type": "final"
+    }
+  }
+}

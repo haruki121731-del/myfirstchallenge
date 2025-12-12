@@ -1,0 +1,105 @@
+{
+  "tasks": {
+    "generate": {
+      "input_schema": {
+        "type": "object",
+        "required": ["prompt"],
+        "properties": {
+          "prompt": { "type": "string" },
+          "context": { "type": "object" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["content"],
+        "properties": {
+          "content": { "type": "string" },
+          "metadata": { "type": "object" }
+        }
+      }
+    },
+    "render": {
+      "input_schema": {
+        "type": "object",
+        "required": ["content", "template"],
+        "properties": {
+          "content": { "type": "string" },
+          "template": { "type": "string" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["rendered"],
+        "properties": {
+          "rendered": { "type": "string" }
+        }
+      }
+    },
+    "upload": {
+      "input_schema": {
+        "type": "object",
+        "required": ["data", "destination"],
+        "properties": {
+          "data": { "type": "string" },
+          "destination": { "type": "string" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "evaluate": {
+      "input_schema": {
+        "type": "object",
+        "required": ["target"],
+        "properties": {
+          "target": { "type": "string" },
+          "criteria": { "type": "object" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["result", "score"],
+        "properties": {
+          "result": { "type": "string", "enum": ["pass", "fail", "retry"] },
+          "score": { "type": "number" }
+        }
+      }
+    },
+    "mutate": {
+      "input_schema": {
+        "type": "object",
+        "required": ["state"],
+        "properties": {
+          "state": { "type": "object" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["mutated"],
+        "properties": {
+          "mutated": { "type": "object" }
+        }
+      }
+    },
+    "halt": {
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "reason": { "type": "string" }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["halted"],
+        "properties": {
+          "halted": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
