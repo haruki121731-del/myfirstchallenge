@@ -1,0 +1,114 @@
+{
+  "extensionName": {
+    "message": "Smart Shopping Assistant",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Get the best deals with price comparison, coupon search, and price alerts! Supports Amazon, Rakuten, Yahoo Shopping",
+    "description": "Extension description"
+  },
+  "priceComparison": {
+    "message": "Price Comparison",
+    "description": "Price comparison tab"
+  },
+  "coupons": {
+    "message": "Coupons",
+    "description": "Coupons tab"
+  },
+  "watchlist": {
+    "message": "Watchlist",
+    "description": "Watchlist tab"
+  },
+  "lowestPrice": {
+    "message": "Lowest Price",
+    "description": "Lowest price label"
+  },
+  "currentPrice": {
+    "message": "Current Price",
+    "description": "Current price label"
+  },
+  "youSave": {
+    "message": "You Save",
+    "description": "You save label"
+  },
+  "shipping": {
+    "message": "Shipping",
+    "description": "Shipping label"
+  },
+  "includingShipping": {
+    "message": "Including Shipping",
+    "description": "Including shipping"
+  },
+  "free": {
+    "message": "Free",
+    "description": "Free"
+  },
+  "availableCoupons": {
+    "message": "Available Coupons",
+    "description": "Available coupons"
+  },
+  "applyCoupon": {
+    "message": "Apply Coupon",
+    "description": "Apply coupon button"
+  },
+  "addToWatchlist": {
+    "message": "Add to Watchlist",
+    "description": "Add to watchlist button"
+  },
+  "priceAlert": {
+    "message": "Price Alert",
+    "description": "Price alert"
+  },
+  "notifyWhenPriceDrops": {
+    "message": "Notify when price drops",
+    "description": "Notify when price drops"
+  },
+  "checkingPrices": {
+    "message": "Checking prices...",
+    "description": "Checking prices message"
+  },
+  "noCouponsFound": {
+    "message": "No coupons currently available",
+    "description": "No coupons found message"
+  },
+  "amazon": {
+    "message": "Amazon",
+    "description": "Amazon"
+  },
+  "rakuten": {
+    "message": "Rakuten",
+    "description": "Rakuten"
+  },
+  "yahoo": {
+    "message": "Yahoo Shopping",
+    "description": "Yahoo Shopping"
+  },
+  "alibaba": {
+    "message": "Alibaba",
+    "description": "Alibaba"
+  },
+  "aliexpress": {
+    "message": "AliExpress",
+    "description": "AliExpress"
+  },
+  "points": {
+    "message": "Points",
+    "description": "Points"
+  },
+  "cashback": {
+    "message": "Cashback",
+    "description": "Cashback"
+  },
+  "upgradeToPremium": {
+    "message": "Upgrade to Premium",
+    "description": "Upgrade to premium"
+  },
+  "premiumFeatures": {
+    "message": "Premium Features",
+    "description": "Premium features"
+  },
+  "aiRecommendations": {
+    "message": "AI Recommendations",
+    "description": "AI recommendations"
+  }
+}

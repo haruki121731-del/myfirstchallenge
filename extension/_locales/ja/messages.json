@@ -1,0 +1,114 @@
+{
+  "extensionName": {
+    "message": "スマートショッピングアシスタント",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "価格比較、クーポン検索、割引アラートで最安値をゲット！Amazon、楽天、Yahoo!ショッピング対応",
+    "description": "Extension description"
+  },
+  "priceComparison": {
+    "message": "価格比較",
+    "description": "Price comparison tab"
+  },
+  "coupons": {
+    "message": "クーポン",
+    "description": "Coupons tab"
+  },
+  "watchlist": {
+    "message": "ウォッチリスト",
+    "description": "Watchlist tab"
+  },
+  "lowestPrice": {
+    "message": "最安値",
+    "description": "Lowest price label"
+  },
+  "currentPrice": {
+    "message": "現在の価格",
+    "description": "Current price label"
+  },
+  "youSave": {
+    "message": "節約額",
+    "description": "You save label"
+  },
+  "shipping": {
+    "message": "送料",
+    "description": "Shipping label"
+  },
+  "includingShipping": {
+    "message": "送料込み",
+    "description": "Including shipping"
+  },
+  "free": {
+    "message": "無料",
+    "description": "Free"
+  },
+  "availableCoupons": {
+    "message": "利用可能なクーポン",
+    "description": "Available coupons"
+  },
+  "applyCoupon": {
+    "message": "クーポンを適用",
+    "description": "Apply coupon button"
+  },
+  "addToWatchlist": {
+    "message": "ウォッチリストに追加",
+    "description": "Add to watchlist button"
+  },
+  "priceAlert": {
+    "message": "価格アラート",
+    "description": "Price alert"
+  },
+  "notifyWhenPriceDrops": {
+    "message": "価格が下がったら通知",
+    "description": "Notify when price drops"
+  },
+  "checkingPrices": {
+    "message": "価格を確認中...",
+    "description": "Checking prices message"
+  },
+  "noCouponsFound": {
+    "message": "現在利用可能なクーポンはありません",
+    "description": "No coupons found message"
+  },
+  "amazon": {
+    "message": "Amazon",
+    "description": "Amazon"
+  },
+  "rakuten": {
+    "message": "楽天市場",
+    "description": "Rakuten"
+  },
+  "yahoo": {
+    "message": "Yahoo!ショッピング",
+    "description": "Yahoo Shopping"
+  },
+  "alibaba": {
+    "message": "Alibaba",
+    "description": "Alibaba"
+  },
+  "aliexpress": {
+    "message": "AliExpress",
+    "description": "AliExpress"
+  },
+  "points": {
+    "message": "ポイント",
+    "description": "Points"
+  },
+  "cashback": {
+    "message": "キャッシュバック",
+    "description": "Cashback"
+  },
+  "upgradeToPremium": {
+    "message": "プレミアムにアップグレード",
+    "description": "Upgrade to premium"
+  },
+  "premiumFeatures": {
+    "message": "プレミアム機能",
+    "description": "Premium features"
+  },
+  "aiRecommendations": {
+    "message": "AI推奨商品",
+    "description": "AI recommendations"
+  }
+}

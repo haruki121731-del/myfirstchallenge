@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Smart Shopping Assistant</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1>⚙️ Settings</h1>
+        <p>スマートショッピングアシスタントの設定</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="settings-section">
+        <h2>一般設定</h2>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="auto-apply-coupons">クーポン自動適用</label>
+            <p class="setting-description">カートページで利用可能なクーポンを自動的に検索・適用します</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="auto-apply-coupons" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="price-alerts">価格アラート</label>
+            <p class="setting-description">ウォッチリストの商品価格が下がったときに通知します</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="price-alerts" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="auto-price-check">自動価格比較</label>
+            <p class="setting-description">商品ページを開いたときに自動的に他サイトの価格を比較します</p>
+          </div>
+          <div class="setting-control">
+            <label class="toggle">
+              <input type="checkbox" id="auto-price-check" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>言語と通貨</h2>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="language">表示言語</label>
+            <p class="setting-description">拡張機能の表示言語を選択します</p>
+          </div>
+          <div class="setting-control">
+            <select id="language" class="select-input">
+              <option value="ja">日本語</option>
+              <option value="en">English</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="currency">通貨</label>
+            <p class="setting-description">価格表示の通貨を選択します</p>
+          </div>
+          <div class="setting-control">
+            <select id="currency" class="select-input">
+              <option value="JPY">¥ 日本円 (JPY)</option>
+              <option value="USD">$ 米ドル (USD)</option>
+              <option value="EUR">€ ユーロ (EUR)</option>
+              <option value="CNY">¥ 人民元 (CNY)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>対応ストア</h2>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label>有効なストア</label>
+            <p class="setting-description">価格比較に含めるストアを選択します</p>
+          </div>
+          <div class="setting-control stores-checkboxes">
+            <label class="checkbox-label">
+              <input type="checkbox" name="store" value="amazon" checked>
+              <span>Amazon</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="store" value="rakuten" checked>
+              <span>楽天市場</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="store" value="yahoo" checked>
+              <span>Yahoo!ショッピング</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="store" value="alibaba">
+              <span>Alibaba</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="store" value="aliexpress">
+              <span>AliExpress</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>プレミアム機能</h2>
+
+        <div class="premium-card">
+          <div class="premium-header">
+            <h3>⭐ Premium プラン</h3>
+            <span class="price">¥500/月</span>
+          </div>
+          <ul class="premium-features">
+            <li>✓ 高度な価格分析レポート</li>
+            <li>✓ AI推奨商品機能</li>
+            <li>✓ 価格予測アラート</li>
+            <li>✓ 広告非表示</li>
+            <li>✓ 無制限のウォッチリスト</li>
+            <li>✓ 優先サポート</li>
+          </ul>
+          <button class="premium-btn" id="upgrade-premium">プレミアムにアップグレード</button>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>データ管理</h2>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label>ウォッチリスト</label>
+            <p class="setting-description">保存されている商品: <strong id="watchlist-count">0</strong></p>
+          </div>
+          <div class="setting-control">
+            <button class="secondary-btn" id="export-watchlist">エクスポート</button>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label>キャッシュのクリア</label>
+            <p class="setting-description">価格履歴とクーポンキャッシュをクリアします</p>
+          </div>
+          <div class="setting-control">
+            <button class="secondary-btn" id="clear-cache">クリア</button>
+          </div>
+        </div>
+
+        <div class="setting-item danger-zone">
+          <div class="setting-info">
+            <label>すべてのデータを削除</label>
+            <p class="setting-description">ウォッチリスト、設定、履歴など全てのデータを削除します</p>
+          </div>
+          <div class="setting-control">
+            <button class="danger-btn" id="reset-all">リセット</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>About</h2>
+
+        <div class="about-info">
+          <p><strong>Smart Shopping Assistant</strong></p>
+          <p>Version: 1.0.0</p>
+          <p class="description">
+            価格比較、クーポン検索、価格アラート機能を提供するブラウザ拡張機能です。
+            Amazon、楽天市場、Yahoo!ショッピングなど主要なECサイトに対応しています。
+          </p>
+          <div class="links">
+            <a href="#" id="privacy-link">プライバシーポリシー</a>
+            <a href="#" id="terms-link">利用規約</a>
+            <a href="#" id="support-link">サポート</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button class="primary-btn" id="save-settings">設定を保存</button>
+      <div class="save-status" id="save-status"></div>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "extensionName": {
+    "message": "智能购物助手",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "通过价格比较、优惠券搜索和降价提醒获得最优惠的价格！支持亚马逊、乐天、雅虎购物",
+    "description": "Extension description"
+  },
+  "priceComparison": {
+    "message": "价格比较",
+    "description": "Price comparison tab"
+  },
+  "coupons": {
+    "message": "优惠券",
+    "description": "Coupons tab"
+  },
+  "watchlist": {
+    "message": "监控列表",
+    "description": "Watchlist tab"
+  },
+  "lowestPrice": {
+    "message": "最低价",
+    "description": "Lowest price label"
+  },
+  "currentPrice": {
+    "message": "当前价格",
+    "description": "Current price label"
+  },
+  "youSave": {
+    "message": "您节省",
+    "description": "You save label"
+  },
+  "shipping": {
+    "message": "运费",
+    "description": "Shipping label"
+  },
+  "includingShipping": {
+    "message": "含运费",
+    "description": "Including shipping"
+  },
+  "free": {
+    "message": "免费",
+    "description": "Free"
+  },
+  "availableCoupons": {
+    "message": "可用优惠券",
+    "description": "Available coupons"
+  },
+  "applyCoupon": {
+    "message": "应用优惠券",
+    "description": "Apply coupon button"
+  },
+  "addToWatchlist": {
+    "message": "添加到监控列表",
+    "description": "Add to watchlist button"
+  },
+  "priceAlert": {
+    "message": "价格提醒",
+    "description": "Price alert"
+  },
+  "notifyWhenPriceDrops": {
+    "message": "降价时通知我",
+    "description": "Notify when price drops"
+  },
+  "checkingPrices": {
+    "message": "正在检查价格...",
+    "description": "Checking prices message"
+  },
+  "noCouponsFound": {
+    "message": "暂无可用优惠券",
+    "description": "No coupons found message"
+  },
+  "amazon": {
+    "message": "亚马逊",
+    "description": "Amazon"
+  },
+  "rakuten": {
+    "message": "乐天市场",
+    "description": "Rakuten"
+  },
+  "yahoo": {
+    "message": "雅虎购物",
+    "description": "Yahoo Shopping"
+  },
+  "alibaba": {
+    "message": "阿里巴巴",
+    "description": "Alibaba"
+  },
+  "aliexpress": {
+    "message": "速卖通",
+    "description": "AliExpress"
+  },
+  "points": {
+    "message": "积分",
+    "description": "Points"
+  },
+  "cashback": {
+    "message": "返现",
+    "description": "Cashback"
+  },
+  "upgradeToPremium": {
+    "message": "升级到高级版",
+    "description": "Upgrade to premium"
+  },
+  "premiumFeatures": {
+    "message": "高级功能",
+    "description": "Premium features"
+  },
+  "aiRecommendations": {
+    "message": "AI推荐",
+    "description": "AI recommendations"
+  }
+}

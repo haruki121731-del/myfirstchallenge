@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Shopping Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../assets/icons/icon48.png" alt="Logo" id="logo-icon">
+        <h1 id="extension-title">Smart Shopping Assistant</h1>
+      </div>
+      <div class="header-actions">
+        <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+        <button id="premium-btn" class="premium-btn" data-i18n="upgradeToPremium">Premium</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="prices" data-i18n="priceComparison">Price Comparison</button>
+      <button class="tab" data-tab="coupons" data-i18n="coupons">Coupons</button>
+      <button class="tab" data-tab="watchlist" data-i18n="watchlist">Watchlist</button>
+    </nav>
+
+    <main>
+      <!-- Price Comparison Tab -->
+      <div id="prices-tab" class="tab-content active">
+        <div id="current-product" class="product-info">
+          <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p data-i18n="checkingPrices">Checking prices...</p>
+          </div>
+
+          <div id="no-product" class="no-product hidden">
+            <p>商品ページを開いて価格を比較しましょう</p>
+          </div>
+
+          <div id="product-details" class="hidden">
+            <div class="product-header">
+              <img id="product-image" src="" alt="Product">
+              <div class="product-title-section">
+                <h3 id="product-title"></h3>
+                <p id="product-brand" class="product-brand"></p>
+              </div>
+            </div>
+
+            <div class="current-price-box">
+              <div class="price-label" data-i18n="currentPrice">Current Price</div>
+              <div class="price-value" id="current-price">¥0</div>
+              <div class="price-meta">
+                <span id="shipping-info"></span>
+                <span id="points-info"></span>
+              </div>
+            </div>
+
+            <div class="price-comparison-list">
+              <h4>他のストアで比較</h4>
+              <div id="price-list"></div>
+            </div>
+
+            <div class="savings-summary" id="savings-summary" class="hidden">
+              <div class="savings-amount">
+                <span data-i18n="youSave">You Save</span>
+                <strong id="savings-value">¥0</strong>
+              </div>
+              <button id="go-to-best-price" class="primary-btn">最安値で購入</button>
+            </div>
+
+            <button id="add-to-watchlist-btn" class="secondary-btn">
+              <span>📌</span>
+              <span data-i18n="addToWatchlist">Add to Watchlist</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coupons Tab -->
+      <div id="coupons-tab" class="tab-content">
+        <div class="coupon-search">
+          <input type="text" id="coupon-search-input" placeholder="Search coupons...">
+          <button id="search-coupons-btn" class="icon-btn">🔍</button>
+        </div>
+
+        <div id="coupons-loading" class="loading hidden">
+          <div class="spinner"></div>
+          <p>Searching for coupons...</p>
+        </div>
+
+        <div id="coupons-list" class="coupons-list">
+          <!-- Coupons will be dynamically inserted here -->
+        </div>
+
+        <div id="no-coupons" class="no-coupons hidden">
+          <p data-i18n="noCouponsFound">No coupons currently available</p>
+        </div>
+
+        <div class="ai-recommendations" id="ai-coupons">
+          <h4 data-i18n="aiRecommendations">AI Recommendations</h4>
+          <div id="ai-coupon-list"></div>
+        </div>
+      </div>
+
+      <!-- Watchlist Tab -->
+      <div id="watchlist-tab" class="tab-content">
+        <div class="watchlist-controls">
+          <select id="sort-watchlist">
+            <option value="date">追加日順</option>
+            <option value="price-low">価格: 安い順</option>
+            <option value="price-high">価格: 高い順</option>
+            <option value="savings">節約額順</option>
+          </select>
+        </div>
+
+        <div id="watchlist-items" class="watchlist-items">
+          <!-- Watchlist items will be dynamically inserted here -->
+        </div>
+
+        <div id="empty-watchlist" class="empty-state">
+          <p>ウォッチリストが空です</p>
+          <p class="hint">商品ページで「ウォッチリストに追加」ボタンをクリックして、価格追跡を開始しましょう</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-label">Total Saved</span>
+          <span class="stat-value" id="total-saved">¥0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label" data-i18n="cashback">Cashback</span>
+          <span class="stat-value" id="cashback-earned">¥0</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
