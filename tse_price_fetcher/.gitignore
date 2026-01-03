@@ -45,3 +45,4 @@ credentials*.json
 
 # Logs
 *.log
+*.zip

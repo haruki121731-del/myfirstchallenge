@@ -2,6 +2,29 @@
 
 東証プライム上場企業の株価を、完全に再現可能・検証可能な形で時系列取得し、分析や研究にそのまま使える構造化データとして自動整形するシステム。
 
+## 🚀 クイックスタート（初めての方）
+
+**たった3ステップで使えます！**
+
+### 1. セットアップ（初回のみ）
+```bash
+./setup.sh    # Mac/Linux
+setup.bat     # Windows
+```
+
+### 2. Excel ファイルを準備
+必須列: `tyo.code` (東証4桁コード), `base_date` (YYYY-MM-DD)
+
+### 3. 実行
+```bash
+./run.sh      # Mac/Linux
+run.bat       # Windows
+```
+
+対話的にファイルを選択するだけ！詳しくは **[QUICKSTART.md](QUICKSTART.md)** をご覧ください。
+
+---
+
 ## 概要
 
 本システムは、Excel または Google Sheets に記載された東証番号（4桁）と基準日から、TradingView を通じて株価データを取得し、同じ表・同じ行に結果を書き戻します。
@@ -21,17 +44,48 @@
 
 ## インストール
 
-```bash
-# リポジトリをクローン
-cd tse_price_fetcher
+### 自動セットアップ（推奨）
 
-# 依存パッケージをインストール
+**Mac/Linux:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+**Windows:**
+```
+setup.bat
+```
+
+### 手動インストール
+
+```bash
+cd tse_price_fetcher
 pip install -r requirements.txt
 ```
 
 ## 使用方法
 
-### Excel ファイルの処理
+### 🎯 簡単な方法（推奨）
+
+対話型インターフェースを使用：
+
+```bash
+./run.sh      # Mac/Linux
+run.bat       # Windows
+```
+
+または：
+
+```bash
+python run.py
+```
+
+ファイル選択と出力方法を対話的に選ぶだけで実行できます！
+
+### 🔧 コマンドライン（上級者向け）
+
+#### Excel ファイルの処理
 
 ```bash
 python src/main.py --source excel --excel-file input.xlsx
