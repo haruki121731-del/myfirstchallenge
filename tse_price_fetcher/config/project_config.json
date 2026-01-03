@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "project_name": "TSE_TradingView_Price_Fetcher",
+    "version": "1.0.0",
+    "language": "ja",
+    "deterministic": true
+  },
+  "input": {
+    "source": ["excel", "google_sheets"],
+    "type": "first_sheet",
+    "header_required": true,
+    "required_columns": [
+      {
+        "name": "tyo.code",
+        "type": "string",
+        "validation": {
+          "regex": "^[0-9]{4}$"
+        }
+      },
+      {
+        "name": "base_date",
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      }
+    ]
+  },
+  "data_provider": {
+    "provider": "tradingview",
+    "symbol_rule": {
+      "format": "TSE:{tyo.code}"
+    },
+    "timeframe": "1D",
+    "fields": ["timestamp", "open", "high", "low", "close", "volume"],
+    "ui_interaction": false,
+    "screen_scraping": false
+  },
+  "business_logic": {
+    "base_date_handling": {
+      "rule": "use_nearest_past_candle_if_missing"
+    },
+    "candle_window": {
+      "type": "relative",
+      "center": "base_date",
+      "past": 5,
+      "future": 5,
+      "total_required": 11
+    },
+    "trading_day_definition": {
+      "source": "tradingview_candle_existence"
+    }
+  },
+  "output": {
+    "numeric_format": {
+      "type": "integer",
+      "decimal_handling": "floor"
+    },
+    "column_naming": {
+      "pattern": "{field}_{offset}",
+      "offset_format": "d{sign}{number}",
+      "example": "close_d-5, close_d0, close_d+1"
+    },
+    "write_mode": "append_columns",
+    "preserve_input_rows": true,
+    "deterministic_order": true
+  }
+}
